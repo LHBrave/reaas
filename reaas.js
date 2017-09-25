@@ -119,7 +119,7 @@ $(function() {
       url: 'http://api.cloudwarehub.com/instances',
       method: 'post',
       data: {
-        cloudware: 'busybox'
+        cloudware: env
       },
       dataType: 'json',
       success: function(resp, textStatus, xhr) {
