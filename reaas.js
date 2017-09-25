@@ -116,7 +116,7 @@ $(function() {
   $('[data-cloudware-env]').each(function(index, el) {
     var env = $(el).attr('data-cloudware-env')
     $.ajax({
-      url: 'http://localhost:8081/instances',
+      url: 'http://api.cloudwarehub.com/instances',
       method: 'post',
       data: {
         cloudware: 'busybox'
