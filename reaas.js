@@ -131,7 +131,7 @@ $(function() {
       var x = dv.getInt32(0, true);
       var y = dv.getInt32(4, true);
       var d = data.slice(8);
-      if ($.browser.msie) {
+      if (window.navigator.userAgent.indexOf("MSIE") != -1) {
 
         var WebPImage = { width:{value:0},height:{value:0} }
         var decoder = new WebPDecoder();
