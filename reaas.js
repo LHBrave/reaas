@@ -304,11 +304,13 @@ $(function() {
   }
   $('[data-cloudware-env]').each(function(index, el) {
     var env = $(el).attr('data-cloudware-env')
+    //start('ws://172.17.0.1:5678', el);
+    //start('ws://abc.ex-lab.org', el)
     $.ajax({
       url: 'http://api.cloudwarehub.com/instances',
       method: 'post',
       data: {
-        cloudware: 'busybox'
+        cloudware: env
       },
       dataType: 'json',
       success: function(resp, textStatus, xhr) {
