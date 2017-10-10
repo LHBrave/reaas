@@ -257,7 +257,9 @@ $(function() {
     };
     ws.binaryType = "arraybuffer";
     ws.onmessage = function(msg) {
-      
+      if (typeof msg.data === "string") { // ping msg
+        return;
+      }
       var data = msg.data;
       var dv = new DataView(data);
       var x = dv.getInt32(0, true);
